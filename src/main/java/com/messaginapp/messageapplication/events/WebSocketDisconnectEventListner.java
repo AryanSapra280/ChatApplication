@@ -37,11 +37,11 @@ public class WebSocketDisconnectEventListner {
         if(username != null) {
             logger.info(username + " has disconnected");
             ChatMessage chatMessage = new ChatMessage();
-            chatMessage.setMessageType(MessageType.LEAVE);
-            chatMessage.setMessage(username);
+            chatMessage.setType(MessageType.LEAVE);
+            chatMessage.setSender(username);
 
             // need to inform all the subscribers that the user has left the chat
-            messageTemplate.convertAndSend("topic/public",chatMessage);
+            messageTemplate.convertAndSend("/topic/public",chatMessage);
         }
     }
 }

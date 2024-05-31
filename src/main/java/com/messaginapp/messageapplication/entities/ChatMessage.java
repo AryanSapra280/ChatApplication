@@ -3,38 +3,59 @@ package com.messaginapp.messageapplication.entities;
 import com.messaginapp.messageapplication.entities.enums.MessageType;
 
 public class ChatMessage {
-    private String message;
+    private MessageType type;
+    private String content;
     private String sender;
-    private MessageType messageType;
 
     
     public ChatMessage() {
     }
 
+
+    public ChatMessage(MessageType type, String content, String sender) {
+        this.type = type;
+        this.content = content;
+        this.sender = sender;
+    }
     
+
+
     @Override
     public String toString() {
-        return "ChatMessage [message=" + message + ", sender=" + sender + ", messageType=" + messageType + "]";
+        return "ChatMessage [type=" + type + ", content=" + content + ", sender=" + sender + "]";
     }
-    public String getMessage() {
-        return message;
+
+
+    public MessageType getType() {
+        return type;
     }
-    public void setMessage(String message) {
-        this.message = message;
+
+
+    public void setType(MessageType type) {
+        this.type = type;
     }
+
+
+    public String getContent() {
+        return content;
+    }
+
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+
     public String getSender() {
         return sender;
     }
+
+
     public void setSender(String sender) {
         this.sender = sender;
     }
-    public MessageType getMessageType() {
-        return messageType;
-    }
-    public void setMessageType(MessageType messageType) {
-        this.messageType = messageType;
-    }
 
     
+   
     
 }
