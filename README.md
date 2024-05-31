@@ -1,5 +1,8 @@
 # Spring Boot WebSocket Chat Application
 
+![image](https://github.com/AryanSapra280/ChatApplication/assets/167304409/3f7c70fe-9bb4-4197-8894-95d87c9b34cd)
+
+
 This project is a chat application built using Spring Boot and WebSockets, leveraging the STOMP protocol. The application allows users to join a chat room, send messages, and receive updates when other users join or leave the chat.
 
 Tech Stack and Frameworks
